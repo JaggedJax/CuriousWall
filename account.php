@@ -6,7 +6,7 @@ if ($_GET["a"] == 'logout') {
 require_once 'header.php';
 ?>
 <div style="width: 550px; margin: 100px auto; text-shadow: 0 0 1px rgba(0,0,0,0.1);">
-	<div style="margin: 40px 1px; font-size:20px;">A Simple Forum</div>
+	<div style="margin: 40px 1px; font-size:20px;"><?php echo $site_name; ?></div>
 	<div id="login_form">
 		<input type="text" id="login_user" placeholder="Username" />
 		<input type="password" id="login_pass" placeholder="Password" />
