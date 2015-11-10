@@ -50,8 +50,8 @@ if ($c = preg_match_all("/" . $re1 . $re2 . $re3 . $re4 . $re5 . "/is", $txt, $m
 	<head>
 		<meta charset="UTF-8">
 		<title><?php get_title($db, $getopic, $getpagination); ?></title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<link rel="stylesheet" type="text/css" href="font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 	</head>
 	<body>
 		<div id="container" class="clearfix">

@@ -1,6 +1,6 @@
 /* RESET & BACKGROUND */
 *                                       { margin: 0; padding: 0; border: 0; vertical-align: baseline; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
-html                                    { background-image: url(bg.png); overflow-y: scroll; }
+html                                    { background-image: url(../img/bg.png); overflow-y: scroll; }
 /* FONT & COLOR */
 body, input, textarea                   { font-size: 15px; color: #211922; line-height: 1.5; word-wrap: break-word; }
 body, input, textarea                   { font-family: Calibri,"Lucida Grande","Lucida Sans Unicode","Lucida Sans","DejaVu Sans","Bitstream Vera Sans","Liberation Sans",Verdana, '宋体', sans-serif }
