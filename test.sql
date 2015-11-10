@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `test`
+-- Database: `curiouswall`
 --
 
 -- --------------------------------------------------------
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `posts` (
   `post_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `post_text` text COLLATE utf8_unicode_ci NOT NULL,
-  `post_date` datetime NOT NULL,
+  `post_date` timestamp NOT NULL,
   `post_topic` int(10) unsigned NOT NULL,
   `post_by` int(10) unsigned NOT NULL,
   PRIMARY KEY (`post_id`),
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `topics` (
   `topic_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `topic_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `topic_text` text COLLATE utf8_unicode_ci NOT NULL,
-  `topic_date` datetime NOT NULL,
+  `topic_date` timestamp NOT NULL,
   `topic_by` int(10) unsigned NOT NULL,
   `topic_score` double NOT NULL,
   `topic_replies` int(10) unsigned NOT NULL,

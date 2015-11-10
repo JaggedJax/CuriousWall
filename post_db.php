@@ -11,9 +11,9 @@ if ($_POST['method'] == 'get')
   if (!isset($_POST['begin'])) $_POST['begin'] = '';
   post_get($db, $_POST['topic'], $_POST['begin']); die();
 }
-else if (($_POST['method'] == 'new') && is_numeric($_POST['topic']))
+else if (($_POST['method'] == 'new') && !empty($_POST['topic']) && is_numeric($_POST['topic']))
 {
-  if (!isset($_SESSION['user_id'])) die('Sign in first.');
+  if (!isset($_SESSION['user_id'])) die('Please sign in first.');
   if ($_POST['topic'] < 0)
   {
     if (!$_POST['title'])
@@ -116,7 +116,7 @@ else if (($_POST['method'] == 'new') && is_numeric($_POST['topic']))
     $query->execute(array($_POST['text'], $_SESSION['user_id'], $_POST['topic']));
     if($query->rowCount() < 1)
     {
-      die('Cannot reply.');
+      die('Please select or start a topic.');
     }
     $query = $db->prepare("UPDATE topics SET topic_replies = topic_replies + 1 WHERE topic_id = ?");
     $query->execute(array($_POST['topic']));
@@ -126,4 +126,6 @@ else if (($_POST['method'] == 'new') && is_numeric($_POST['topic']))
 
   die('SUCCESS'.$_POST['topic']);
 }
-?>
+else{
+	die('Please select or start a topic.');
+}

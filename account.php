@@ -3,7 +3,7 @@
   if ($_GET["a"] == 'logout') { $SHALL_LOG_OUT = true; }
   require_once 'header.php';
 ?>
-<div style="width: 520px; margin: 100px auto; text-shadow: 0 0 1px rgba(0,0,0,0.1);">
+<div style="width: 550px; margin: 100px auto; text-shadow: 0 0 1px rgba(0,0,0,0.1);">
   <div style="margin: 40px 1px; font-size:20px;">A Simple Forum</div>
   <div id="login_form">
     <input type="text" id="login_user" placeholder="Username" />
@@ -23,5 +23,4 @@
 </div>
 <script> var $IS_ACCOUNT_PHP = true; </script>
 <?php
-  require_once 'footer.php'; 
-?>
+  require_once 'footer.php';
