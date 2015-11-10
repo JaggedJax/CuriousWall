@@ -279,6 +279,9 @@ if (typeof $IS_INDEX_PHP != 'undefined')
   {
     e.preventDefault();
     clearPost();
+	//Show the post area and post button, in case they've been hidden by a locked post 
+	$("#post_text").show();
+	$("#post_button").show();
     if ($current_topic >= 0)
     {
       $('#prepare_post_button').contents().filter(function(){return this.nodeType == 3}).replaceWith('&nbsp;Cancel');

@@ -88,8 +88,9 @@ function post_get($db, $xtopic, $xbegin) {
 		}
 		if ($isitlockeddisplaymessage == true) {
 			echo "<div id='lockedmessage'>This topic is locked: You can not post in it unless you are a moderator.</div>";
+			echo '<script type="text/javascript">$(document).ready(function() { $("#post_text").hide(); $("#post_button").hide();});</script>';
 		} else {
-			
+			echo '<script type="text/javascript">$(document).ready(function() { $("#post_text").show(); $("#post_button").show();});</script>';
 		}
 	} else {
 		$limit = 16;
